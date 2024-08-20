@@ -4,7 +4,7 @@
 
 # WormLang Interpreter
 
-WormLang is a lightweight and versatile programming language designed to facilitate basic arithmetic, logical operations, conditional statements, loops, functions, and more. The WormLang interpreter allows you to execute `.worm` files that follow the syntax defined for this language.
+WormLang is a lightweight and versatile programming language designed to facilitate basic arithmetic, logical operations, conditional statements, loops, functions, recursion, lambda expressions, print statements, and more. The WormLang interpreter allows you to execute `.worm` files that follow the syntax defined for this language.
 
 ## Features
 
@@ -12,7 +12,7 @@ WormLang is a lightweight and versatile programming language designed to facilit
 - **Logical Operations**: Includes AND, OR, and NOT operations.
 - **Control Structures**: IF statements and FOR loops for flow control.
 - **Functions**: Define and invoke single-line functions with support for recursion.
-- **Lambda Expressions**: Anonymous functions for concise operations.
+- **Lambda Expressions**: Anonymous functions executed with given parameters.
 - **I/O Operations**: Print to the console and read from `.worm` files.
 
 ## Installation
@@ -86,9 +86,11 @@ PRINT( factorial(5) )  # Output: 120
 ```
 
 ### Lambda Expressions
+Lambda expressions in WormLang are declared and then executed by providing values in parentheses:
+
 ```worm
-LET square = LAMBDA(x) : x * x END
-PRINT( square(5) )  # Output: 25
+LAMBDA (x) : x * x END (5)  # Output: 25
+LAMBDA (x) : x + 5 END (10) # Output: 15
 ```
 
 ## Running WormLang Files
@@ -97,15 +99,3 @@ To run a `.worm` file, use the following command:
 ```bash
 python Main.py your_script.worm
 ```
-
-## Contributing
-
-Contributions are welcome! Feel free to open issues or submit pull requests.
-
-## License
-
-This project is licensed under the MIT License.
-
----
-
-I'll save this updated version as your README file. Does this meet your needs?
