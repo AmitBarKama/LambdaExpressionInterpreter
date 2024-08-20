@@ -1,13 +1,6 @@
   # WormLang - Interpreter written in Python
 
-1. **Introduction**
-2. **Features**
-3. **Installation**
-4. **Basic Syntax**
-5. **Examples**
-6. **Running WormLang Files**
-
-
+---
 
 # WormLang Interpreter
 
@@ -18,7 +11,7 @@ WormLang is a lightweight and versatile programming language designed to facilit
 - **Arithmetic Operations**: Supports addition, subtraction, multiplication, division, and modulus.
 - **Logical Operations**: Includes AND, OR, and NOT operations.
 - **Control Structures**: IF statements and FOR loops for flow control.
-- **Functions**: Define and invoke functions with support for recursion.
+- **Functions**: Define and invoke single-line functions with support for recursion.
 - **Lambda Expressions**: Anonymous functions for concise operations.
 - **I/O Operations**: Print to the console and read from `.worm` files.
 
@@ -87,13 +80,7 @@ END
 
 ### Functions
 ```worm
-LET factorial(n) :
-    IF n == 0 THEN
-        1
-    ELSE
-        n * factorial(n - 1)
-    END
-END
+LET factorial(n) : IF n == 0 THEN 1 ELSE n * factorial(n - 1) END
 
 PRINT( factorial(5) )  # Output: 120
 ```
@@ -110,3 +97,15 @@ To run a `.worm` file, use the following command:
 ```bash
 python Main.py your_script.worm
 ```
+
+## Contributing
+
+Contributions are welcome! Feel free to open issues or submit pull requests.
+
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+I'll save this updated version as your README file. Does this meet your needs?
